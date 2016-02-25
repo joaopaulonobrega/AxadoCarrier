@@ -1,0 +1,166 @@
+﻿@model AxadoCarrier.ViewModels.CarrierViewModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Deletar transportadora</h2>
+
+<h3>Deseja deletar esta transportadora?</h3>
+<div>
+    <h4>Esta ação removerá completamente esta transportadora.</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CpfCnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CpfCnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeRazao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeRazao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RgIe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RgIe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Celular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Celular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Site)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Site)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @{
+                var routeValue = new RouteValueDictionary();
+                routeValue.Add("page", "1");
+            }
+
+            @Html.ActionLink("Voltar", "Index", routeValue)
+        </div>
+    }
+</div>

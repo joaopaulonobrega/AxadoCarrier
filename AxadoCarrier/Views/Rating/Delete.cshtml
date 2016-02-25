@@ -1,0 +1,38 @@
+﻿@model AxadoCarrier.ViewModels.RatingViewModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Deletar Classificação</h2>
+
+<h3>Deseja deletar esta classificação?</h3>
+<div>
+    <h4>Esta ação removerá completamente esta classificação.</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @{
+                var routeValue = new RouteValueDictionary();
+                routeValue.Add("page", "1");
+            }
+
+            @Html.ActionLink("Voltar", "Index", routeValue)
+        </div>
+    }
+</div>
